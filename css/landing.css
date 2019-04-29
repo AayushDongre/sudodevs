@@ -1,0 +1,112 @@
+*{ -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+html::-webkit-scrollbar{ 
+    width: 0 !important 
+}
+html{
+     overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    
+}
+
+body{
+    font-size: 25px;
+    background: url("../img/landingbk.png");
+}
+.bk{
+    width: 100vw;
+    min-height:100vh;
+    position: fixed;
+    z-index: -100;
+    top:-100px;
+    margin: 0 auto;
+}
+.content{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    color:white;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    line-height: normal;
+    text-align: center;
+    display: flex;
+    align-content: center;
+
+}
+.para{
+    position: relative;
+    width: 50%;
+    margin:auto;
+
+}
+.title{
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.what{
+    position: absolute;
+    top:70%;
+    left: 40%;
+    margin:auto;
+    color: white;   
+    font-size: 1.5em; 
+    text-decoration: none;
+}
+
+.what::after{
+    position: absolute;
+    bottom:20px;
+    left:-30px;
+    background:rgb(17,142,147,0.8);
+    width:0%;
+    height: 10px;
+    content: "";
+    transition: .8s;
+    transition-timing-function: cubic-bezier(.25, 1.47, .63, 1.47);
+}
+.what:hover::after{
+    width: 130%;
+}
+
+
+@media only screen and (max-width: 600px) {
+   body{
+       font-size: 20px
+   }
+   .para{
+    position: relative;
+    width: 90%;
+    margin:auto;
+    text-align: center;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.what{
+    position: absolute;
+    top:70%;
+    left:30%;
+    /* margin:auto; */
+    color: white;   
+    font-size: 30px; 
+}
+.what::after{
+    bottom: 10px;
+    left:-20px;
+}
+   
+    .bk{
+        min-width: 100vw;
+        height:100vh;
+        transform: scale(3);
+            position: fixed;
+            z-index: -100;
+    }
+}
